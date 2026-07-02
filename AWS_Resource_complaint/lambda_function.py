@@ -45,7 +45,7 @@ def lambda_handler(event, context):
     ######
     instance = ec2_client.describe_instances(InstanceIds=[instance_id])['Reservations'][0]['Instances'][0]
     
-    # Check if the specific EC2 instance has Cloud Trail logging enabled.
+    # Check if the specific EC2 instance has Detailed Monitoring enabled.
     
     if not instance['Monitoring']['State'] == "enabled":
         compliance_status = "NON_COMPLIANT"
