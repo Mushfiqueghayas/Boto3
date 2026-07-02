@@ -36,8 +36,8 @@ def lambda_handler(event, context):
         {
           "ReservationId": "r-001",
           "Instances": [
-            { "InstanceId": "i-aaa111", "InstanceType": "t3.medium" },
-            { "InstanceId": "i-bbb222", "InstanceType": "t3.medium" }
+            { "InstanceId": "i-aaa111", "InstanceType": "t3.medium", "Monitoring": {"State": "disabled"} },
+            { "InstanceId": "i-bbb222", "InstanceType": "t3.medium", "Monitoring": {"State": "enabled"} }
           ]
         {
       [    
